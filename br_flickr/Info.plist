@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>31</string>
 	<key>FLICKR_API_KEY</key>
 	<string>$(FLICKR_API_KEY)</string>
 	<key>FLICKR_ROOT_URL</key>
