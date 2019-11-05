@@ -7,3 +7,30 @@
 //
 
 import Foundation
+
+@testable import br_flickr
+
+class RequestManagerMock: RequestManager {
+    
+    private let data: Data?
+    
+    init(data: Data? = nil) {
+        self.data = data
+    }
+    
+    override func handleGETRequest(urlString: String, session: URLSession = URLSession(configuration: .default), completion: @escaping RequestCompletion) -> URLSessionTask? {
+        
+        guard let _ = URL(string: urlString) else {
+            completion(.failure(.network(string: "Wrong url format")))
+            return nil
+        }
+        
+        guard let data = data else {
+            completion(.failure(.network(string: "Please try again later.")))
+            return nil
+        }
+        
+        completion(.success(data))
+        return nil
+    }
+}
