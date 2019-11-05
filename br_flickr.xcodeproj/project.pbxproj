@@ -116,10 +116,8 @@
 		D27732D0237143D700FAEF0C /* br_flickr */ = {
 			isa = PBXGroup;
 			children = (
+				D2773307237159CD00FAEF0C /* UI */,
 				D27732ED2371479D00FAEF0C /* Configs */,
-				D27732D1237143D700FAEF0C /* AppDelegate.swift */,
-				D27732D3237143D700FAEF0C /* SceneDelegate.swift */,
-				D27732D5237143D700FAEF0C /* ViewController.swift */,
 				D27732D7237143D700FAEF0C /* Main.storyboard */,
 				D27732DA237143D800FAEF0C /* Assets.xcassets */,
 				D27732DC237143D800FAEF0C /* LaunchScreen.storyboard */,
@@ -146,6 +144,16 @@
 				D27732FC2371542100FAEF0C /* Info.plist */,
 			);
 			path = br_flickrTests;
+			sourceTree = "<group>";
+		};
+		D2773307237159CD00FAEF0C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D27732D1237143D700FAEF0C /* AppDelegate.swift */,
+				D27732D3237143D700FAEF0C /* SceneDelegate.swift */,
+				D27732D5237143D700FAEF0C /* ViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
