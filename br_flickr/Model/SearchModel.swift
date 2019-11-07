@@ -11,11 +11,16 @@ import Foundation
 //MARK: - Flickr List response
 struct FlickrImageListResponse: Codable {
     
-    let at: String?
+    let stat: String?
     let photos: FlickrPhotosList?
     
+    init(stat: String?, photos: FlickrPhotosList?) {
+        self.stat = stat
+        self.photos = photos
+    }
+    
     enum Codingkeys: String, CodingKey {
-        case at = "at"
+        case stat = "stat"
         case photo = "photos"
     }
 }
@@ -26,7 +31,15 @@ struct FlickrPhotosList: Codable {
     let pages: Int?
     let perpage: Int?
     let total: UncertainValue<Int>?
-    let photo: [PhotoInformation<String>]?
+    let photo: [PhotoInformation]?
+    
+    init(page: Int?, pages: Int?, perpage: Int?, total: Int?, photo: [PhotoInformation]?) {
+        self.page = page
+        self.pages = pages
+        self.perpage = perpage
+        self.total = UncertainValue<Int>(value: total)
+        self.photo = photo
+    }
     
     enum Codingkeys: String, CodingKey {
         case page = "page"
@@ -36,14 +49,14 @@ struct FlickrPhotosList: Codable {
     }
 }
 
-struct PhotoInformation<T: Codable>: Codable {
+struct PhotoInformation: Codable {
     
     let id: String?
     let secret: String?
     let server: String?
     let title: String?
-    let owner: T?
     let urls: InfoUrls?
+    let url_o: String?
     
     struct InfoUrls: Codable {
         
@@ -92,7 +105,7 @@ struct OwnerObject: Codable {
 struct ImageInfoResponse: Codable {
     
     let at: String?
-    let photo: PhotoInformation<OwnerObject>?
+    let photo: PhotoInformation?
     
     enum Codingkeys: String, CodingKey {
         case at = "at"
@@ -103,6 +116,10 @@ struct ImageInfoResponse: Codable {
 public struct UncertainValue<T: Codable>: Codable {
     
     var value: T?
+    
+    init(value: Int?) {
+        self.value = value as? T
+    }
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
