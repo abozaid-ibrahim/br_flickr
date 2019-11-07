@@ -35,7 +35,14 @@ open class RequestManager: NSObject {
         
         var request = RequestFactory.request(method: .GET, url: url)
         
-        if let reachability = try? Reachability(), reachability.connection != .unavailable {
+        let cache =  URLCache.shared
+        
+        if let data = cache.cachedResponse(for: request)?.data {
+            completion(.success(data))
+            return nil
+        }
+        
+        if let reachability = try? Reachability(), reachability.connection == .unavailable {
             request.cachePolicy = .returnCacheDataDontLoad
         }
         
@@ -45,7 +52,9 @@ open class RequestManager: NSObject {
                 return
             }
             
-            if let data = data {
+            if let data = data, let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300 {
+                let cachedData = CachedURLResponse(response: response, data: data)
+                cache.storeCachedResponse(cachedData, for: request)
                 completion(.success(data))
             }
         }
