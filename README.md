@@ -16,8 +16,8 @@ If this is your first time encountering swift/ios development, please follow [th
 pod install
 
 ## Setup Configs
--- After running `pod install`, double click the `.xcworkspace` file to launch the application
--- Create three Config files (Staging, Development and Production) and place it in the Cofigs directory.
+* After running `pod install`, double click the `.xcworkspace` file to launch the application
+* Create three Config files (Staging, Development and Production) and place it in the Cofigs directory.
 
 A sample development config file should look like this:
 `Development.xcconfig`
