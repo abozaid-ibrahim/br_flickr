@@ -10,6 +10,7 @@
 		61BDB8003F8EB3375F98630A /* Pods_br_flickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214AEBDAEDA75A7707AFB371 /* Pods_br_flickr.framework */; };
 		D26870C82373133F0065FABE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26870C72373133F0065FABE /* UIImageView+Extension.swift */; };
 		D26870CE2373FB370065FABE /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26870CD2373FB370065FABE /* ImagePreviewController.swift */; };
+		D26870D0237407B10065FABE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D26870CF237407B10065FABE /* README.md */; };
 		D27732D2237143D700FAEF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D1237143D700FAEF0C /* AppDelegate.swift */; };
 		D27732D4237143D700FAEF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D3237143D700FAEF0C /* SceneDelegate.swift */; };
 		D27732D6237143D700FAEF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D5237143D700FAEF0C /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		CDC948DF77158B7A00CF9F7A /* Pods-br_flickr.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-br_flickr.debug (production).xcconfig"; path = "Target Support Files/Pods-br_flickr/Pods-br_flickr.debug (production).xcconfig"; sourceTree = "<group>"; };
 		D26870C72373133F0065FABE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D26870CD2373FB370065FABE /* ImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
+		D26870CF237407B10065FABE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D27732CE237143D700FAEF0C /* br_flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = br_flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27732D1237143D700FAEF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D27732D3237143D700FAEF0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		D27732C5237143D700FAEF0C = {
 			isa = PBXGroup;
 			children = (
+				D26870CF237407B10065FABE /* README.md */,
 				D27732D0237143D700FAEF0C /* br_flickr */,
 				D27732F92371542000FAEF0C /* br_flickrTests */,
 				D27732CF237143D700FAEF0C /* Products */,
@@ -424,6 +427,7 @@
 			files = (
 				D27732DE237143D800FAEF0C /* LaunchScreen.storyboard in Resources */,
 				D27732DB237143D800FAEF0C /* Assets.xcassets in Resources */,
+				D26870D0237407B10065FABE /* README.md in Resources */,
 				D27732D9237143D700FAEF0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
