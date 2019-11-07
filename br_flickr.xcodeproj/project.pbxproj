@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		61BDB8003F8EB3375F98630A /* Pods_br_flickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214AEBDAEDA75A7707AFB371 /* Pods_br_flickr.framework */; };
 		D26870C82373133F0065FABE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26870C72373133F0065FABE /* UIImageView+Extension.swift */; };
+		D26870CE2373FB370065FABE /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26870CD2373FB370065FABE /* ImagePreviewController.swift */; };
 		D27732D2237143D700FAEF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D1237143D700FAEF0C /* AppDelegate.swift */; };
 		D27732D4237143D700FAEF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D3237143D700FAEF0C /* SceneDelegate.swift */; };
 		D27732D6237143D700FAEF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27732D5237143D700FAEF0C /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		CCF0209715441BD725EA0001 /* Pods-br_flickr.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-br_flickr.debug (staging).xcconfig"; path = "Target Support Files/Pods-br_flickr/Pods-br_flickr.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		CDC948DF77158B7A00CF9F7A /* Pods-br_flickr.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-br_flickr.debug (production).xcconfig"; path = "Target Support Files/Pods-br_flickr/Pods-br_flickr.debug (production).xcconfig"; sourceTree = "<group>"; };
 		D26870C72373133F0065FABE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		D26870CD2373FB370065FABE /* ImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
 		D27732CE237143D700FAEF0C /* br_flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = br_flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27732D1237143D700FAEF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D27732D3237143D700FAEF0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		D26870CC2373FB240065FABE /* Image Preview */ = {
+			isa = PBXGroup;
+			children = (
+				D26870CD2373FB370065FABE /* ImagePreviewController.swift */,
+			);
+			path = "Image Preview";
+			sourceTree = "<group>";
+		};
 		D27732C5237143D700FAEF0C = {
 			isa = PBXGroup;
 			children = (
@@ -204,10 +214,10 @@
 		D2773307237159CD00FAEF0C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D26870CC2373FB240065FABE /* Image Preview */,
 				D2DDDEC22372A8290085AB8F /* Image Search */,
 				D27732D1237143D700FAEF0C /* AppDelegate.swift */,
 				D27732D3237143D700FAEF0C /* SceneDelegate.swift */,
-				D27732D5237143D700FAEF0C /* ViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -274,6 +284,7 @@
 				D2DDDEC72372A8A60085AB8F /* Cell */,
 				D2DDDEC42372A8430085AB8F /* View Model */,
 				D2DDDEC32372A83A0085AB8F /* Extensions */,
+				D27732D5237143D700FAEF0C /* ViewController.swift */,
 			);
 			path = "Image Search";
 			sourceTree = "<group>";
@@ -494,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26870CE2373FB370065FABE /* ImagePreviewController.swift in Sources */,
 				D26870C82373133F0065FABE /* UIImageView+Extension.swift in Sources */,
 				D27732D6237143D700FAEF0C /* ViewController.swift in Sources */,
 				D27732D2237143D700FAEF0C /* AppDelegate.swift in Sources */,

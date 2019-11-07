@@ -45,9 +45,12 @@ class ViewController: UIViewController {
             .setDelegate(self)
             .disposed(by: disposeBag)
         
-//        mainTableView.rx.itemDeselected.subscribe(onNext: { [weak self] (indexPath) in
-//            guard let self = self, let cell = self.mainTableView.cellForRow(at: indexPath) as? ImageSearchCell else { return }
-//        }).disposed(by: disposeBag)
+        mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] (indexPath) in
+            guard let self = self, let cell = self.mainTableView.cellForRow(at: indexPath) as? ImageSearchCell else { return }
+            let controller = ImagePreviewController()
+            controller.imageInformation = cell.imageInformation
+            self.navigationController?.pushViewController(controller, animated: true)
+        }).disposed(by: disposeBag)
         
         let viewModel = ImageSearchViewModel(searchText: searchRelay.asDriver(), fetch: fetchRelay, disposeBag: disposeBag)
         
@@ -60,6 +63,14 @@ class ViewController: UIViewController {
             }.disposed(by: disposeBag)
         
         self.fetchRelay.accept(())
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = mainTableView.indexPathForSelectedRow {
+            mainTableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }
 

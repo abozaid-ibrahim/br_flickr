@@ -55,35 +55,16 @@ struct PhotoInformation: Codable {
     let secret: String?
     let server: String?
     let title: String?
-    let urls: InfoUrls?
     let url_o: String?
-    
-    struct InfoUrls: Codable {
-        
-        let url: [UrlObject]?
-        
-        enum Codingkeys: String, CodingKey {
-            case url = "url"
-        }
-    }
-    
-    struct UrlObject: Codable {
-        
-        let type: String
-        let content: String
-        
-        enum Codingkeys: String, CodingKey {
-            case type = "type"
-            case content = "_content"
-        }
-    }
+    let ownername: String?
     
     enum Codingkeys: String, CodingKey {
         case id = "id"
         case secret = "secret"
         case server = "server"
         case title = "title"
-        case owner = "owner"
+        case url_o = "url_o"
+        case ownername = "ownername"
     }
 }
 
